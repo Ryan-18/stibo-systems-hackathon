@@ -31,6 +31,8 @@ This application ensures data security through **Role-Based Access Control (RBAC
 ### 5. Secure Credential Handling
 - **Base64 encoding** for sensitive credentials before storage.
 - **Environment variables** used to store JWT secrets and database URIs.
+### 6.Zero Trust Architecture: 
+- **No internal employee or developer has access to customer secrets.
 
 ---
 ## How It Works
