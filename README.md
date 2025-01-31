@@ -94,6 +94,14 @@ This application ensures data security through **Role-Based Access Control (RBAC
 | GET | `/get-all-secrets` | Retrieve All Secrets | User |
 | GET | `/audit-logs` | View Audit Logs | Admin |
 
+## Role-Based Access Control (RBAC)
+| Role        | Create Secret | Read Secret | Update Secret | Delete Secret | Manage KMS | View Audit Logs |
+|------------|--------------|-------------|---------------|---------------|------------|----------------|
+| Customer   | ✅            | ✅           | ✅             | ✅             | ✅          | ✅              |
+| saas       | ❌            | ✅           | ❌             | ❌             | ❌          | ❌              |
+| Developer  | ❌            | ❌           | ❌             | ❌             | ❌          | ❌              |
+| Employee   | ❌            | ❌           | ❌             | ❌             | ❌          | ❌              |
+
 ---
 ## Setup & Installation
 ### Prerequisites
@@ -132,4 +140,38 @@ python app.py
 ---
 ## Conclusion
 KeyProxyServer provides **multi-cloud KMS support**, **strong authentication**, and **secure access control** with **audit logging** to ensure secrets are protected. It is an **enterprise-grade solution** for organizations requiring a **secure and centralized key management system** across different cloud providers.
+
+
+
+## Customer Portal
+The customer portal is a web-based dashboard built with **React, TypeScript, and Vite**. It provides the following functionalities:
+
+### **Dashboard**
+- Overview of stored secrets.
+- Audit logs showing all actions performed on secrets.
+
+### **Key Management**
+- Add new encryption keys.
+- Delete existing keys.
+- Encrypt and decrypt data using customer-managed keys.
+
+### **Secret Management**
+- Store and manage API keys, database credentials, and other secrets securely.
+- Retrieve secrets securely using RBAC policies.
+- Grant or revoke access to secrets as needed.
+
+## Security Measures
+- **RBAC Enforcement**: Only customers can manage secrets.
+- **JWT Authentication**: Ensures only authenticated requests can access APIs.
+- **Audit Logging**: Tracks all actions for security and compliance.
+- **Data Encryption**: Uses KMS-based encryption for maximum security.
+
+## Access Control & SaaS Integration
+- **SaaS Platform Access**: The SaaS platform can securely retrieve secrets for system operations but cannot display them.
+- **No Employee Access**: Employees, including developers, cannot access stored secrets under any circumstances.
+- **Secure API Integration**: Ensures that secrets are used only for authorized external system connections.
+
+---
+This document ensures a clear understanding of how KeyProxyServer provides secure and scalable secret management while adhering to Zero Trust principles.
+
 
