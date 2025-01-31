@@ -36,6 +36,8 @@ This application ensures data security through **Role-Based Access Control (RBAC
 
 ---
 ## How It Works
+![Screenshot (45)](https://github.com/user-attachments/assets/2c047b7e-cee9-4c56-83f0-d30017ac6dd5)
+
 ### 1. User Authentication & Signup
 - Users sign up with their **email, password, and KMS selection**.
 - Passwords are securely stored using **bcrypt hashing**.
